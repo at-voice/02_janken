@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js練習</title>
+</head>
+
+<body>
+  <h1 id="echo">js練習</h1>
+
+  <script>
+    // ここに処理を追加
+    // alert("テストだよ〜 ああああああああああああああああああああああああああああああああああああああああああああああああああああああああ")// htmlが読み込まれたタイミングでアラートを出す,全角スペースはNGだけど絵文字はOK
+
+    // ⇦command + / で出せる。コメントアウトと呼ぶ。このコードはこういう動きをするんだよ〜的な説明を日本語で書いてメモにする。
+    // 書いたコードの前につけて、無効化することもできるよ
+
+
+    // 画面上では何も起こらない。検証画面のConsoleに表示する。メール送信できたよ〜とかユーザーに伝えるために使う。
+
+    const number1 = 10 % 2;
+    // %はあまりを出す。10/2=5...0
+
+    console.log(number1);
+    console.log("Hello world");
+
+    // 演習↓
+    // 「100」と「200」の数値をそれぞれ変数に入れ，加算した結果を alert() で表示．
+
+    const number2 = 100 + 200;
+    alert(number2);
+
+    // 「G's」と「ACADEMY」の文字列をそれぞれ変数に入れ，つなげて alert() で表示． 
+    // \はOptionと¥(右上)で出してエスケープ処理。例）'G\'\s'; \\で囲んだものを無効化する。JSちゃんが文字の’と命令の’の区別がつかないので。
+    // const→変数作るぞ〜！
+    const text1 = "G's";
+    const text2 = "ACADEMY";
+    const text3 = text1 + text2;
+    alert(text3);
+    console.log(text3);
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

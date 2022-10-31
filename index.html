@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <!-- webフォント -->
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+  <!-- webフォントここまで -->
+  <title>じゃんけん</title>
+</head>
+
+<body>
+  <header>
+    <!-- <h1>じゃんけん</h1> -->
+  </header>
+
+  <main>
+    <!-- <ul>
+      <li id="gu_btn">グー</li>
+      <li id="cho_btn">チョキ</li>
+      <li id="par_btn">パー</li>
+    </ul>
+    <div id="com_hand">コンピュータの出した手は？</div>
+    <div id="result">結果は？</div> -->
+
+
+
+
+
+
+    <!-- ここから書く -->
+
+    <!-- 1番大きい箱の始まり -->
+    <div class="main">
+
+      <!-- 対戦相手や勝敗結果を出す箱_対戦相手選択画面 -->
+      <div class="monitor_1">
+
+        <p>対戦相手を選んでね</p>
+
+        <div class="monitor_img">
+          <div class="monitor_belco">
+            <img src="img/belco.png" alt="">
+          </div>
+          <div class="monitor_cat">
+            <img src="img/cat.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- じゃんけん勝負画面〜じゃんけん選択肢 べる子編 -->
+      <div class="monitor_belco_window">
+        <div class="monitor_2">
+
+          <input type="text" value="かまん べる子" id="text1" maxlength="5" class="input_text" />
+          <input type="button" id="button1" value="OK" class="input_btn" />
+
+          <div class="monitor_2_in">
+            <div class="monitor_img">
+              <div class="monitor_belco">
+                <img src="img/belco.png" alt="">
+              </div>
+
+              <div class="monitor_belco_text">
+                <div class="monitor_2_sub">
+                  <p class="name">
+                  <p><span id="span1"></span></p>
+                  </p>
+                </div>
+                <div class="monitor_2_detail">
+                  <p id="belco_yourchoice" class="choice">***</p>
+                </div>
+
+                <div class="monitor_2_sub">
+                  <p class="name">べる子</p>
+                </div>
+                <div class="monitor_2_detail">
+                  <p id="belco_choice" class="choice">***</p>
+                </div>
+
+                <div class="monitor_2_sub">
+                  <p>結果</p>
+                </div>
+                <div>
+                  <span class="result_line">
+                    <p id="belco_result" class="choice">結果</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 選択肢の箱 -->
+        <div class="select">
+          <!-- 選択肢グー -->
+          <div class="gu">
+            <div class="ja_img">
+              <img src="img/ja_gu.png" alt="">
+            </div>
+          </div>
+
+          <!-- 選択肢チョキ -->
+          <div class="cho">
+            <img src="img/ja_cho.png" alt="">
+          </div>
+
+
+          <!-- 選択肢パー -->
+          <div class="pa">
+            <img src="img/ja_pa.png" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- じゃんけん勝負画面〜じゃんけん選択肢 猫編 -->
+    <div class="monitor_cat_window">
+      <div class="monitor_2">
+        <input type="text" value="かまん べる子" id="text2" maxlength="5" class="input_text" />
+        <input type="button" id="button2" value="OK" class="input_btn" />
+
+        <div class="monitor_2_in">
+          <div class="monitor_img">
+            <div class="monitor_belco">
+              <img src="img/cat.jpg" alt="">
+            </div>
+
+            <div class="monitor_belco_text">
+              <div class="monitor_2_sub">
+                <p class="name">
+                <p><span id="span2"></span></p>
+                </p>
+              </div>
+              <div class="monitor_2_detail">
+                <p id="cat_yourchoice" class="choice">***</p>
+              </div>
+
+              <div class="monitor_2_sub">
+                <p class="name">ねこちゃん</p>
+              </div>
+              <div class="monitor_2_detail">
+                <p id="cat_choice" class="choice">***</p>
+              </div>
+
+              <div class="monitor_2_sub">
+                <p>結果</p>
+              </div>
+              <div>
+                <span class="result_line">
+                  <p id="cat_result" class="choice">結果</p>
+                  <p id="cat_result_2" class="choice">ねこちゃんの勝ち</p>
+
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 選択肢の箱 -->
+      <div class="select">
+        <!-- 選択肢グー -->
+        <div class="gu_cat">
+          <div class="ja_img">
+            <img src="img/ja_gu.png" alt="">
+          </div>
+        </div>
+
+        <!-- 選択肢チョキ -->
+        <div class="cho_cat">
+          <img src="img/ja_cho.png" alt="">
+        </div>
+
+
+        <!-- 選択肢パー -->
+        <div class="pa_cat">
+          <img src="img/ja_pa.png" alt="">
+        </div>
+
+
+
+      </div>
+
+      <div class="lose">
+        <p>わたしが負けました</p>
+      </div>
+
+      <!-- 鳴き声 -->
+      <audio id="audio">
+        <source src="audio/cat.mp3" type="audio/mp3">
+      </audio>
+
+    </div>
+    </div>
+
+
+
+  </main>
+
+  <!-- <footer>フッター
+    <div>
+      <p>作業用メモ</p>
+      <ul>
+        <li>CSSサイズ感調整はあとで</li>
+        <li>必要なコメントアウト解除して</li>
+      </ul>
+    </div>
+  </footer> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+
+    // ここから書くよ〜★
+
+
+
+
+    // 対戦相手を選ぼう
+    $(".monitor_belco").on("click", function () {
+      //処理内容
+      $(".monitor_1").hide();
+      $(".monitor_belco_window").show()
+    }); //べる子選択
+
+    $(".monitor_cat").on("click", function () {
+      //処理内容
+      $(".monitor_1").hide();
+      $(".monitor_cat_window").show()
+    }); //ねこちゃん選択
+
+
+
+
+
+    // VS べる子
+
+    // 名前を入れてもらう
+    $("#button1").click(function () {
+      const str1 = $("#text1").val(); // テキストボックスのvalue値を取得
+      $("#span1").text(str1); // spanタグに値を設定
+    });
+
+
+    // プレイヤーがグーを押した場合
+    $(".gu").on("click", function () {
+
+      // ★べるこ側のランダムな手を作るために乱数を作ります
+      // 
+      // 0から1の間でランダムな値（乱数）を表示．
+      const randomNumber1 = Math.random();
+      // 0から2までのどれかが表示される！
+      const randomNumber2 = Math.floor(Math.random() * 3);
+      // randomNumber2が、0→グー 1→チョキ 2→パーとします
+
+      // ★プレイヤーのアクションに起因する分岐を作ります
+      // 
+      if (randomNumber2 === 0) {
+
+        $("#belco_yourchoice").text("グー")
+        $("#belco_choice").text("グー")
+        $("#belco_result").text("あいこ")
+      }
+
+      else if (randomNumber2 === 1) {
+        $("#belco_yourchoice").text("グー")
+        $("#belco_choice").text("チョキ")
+        $("#belco_result").text("あなたの勝ち")
+      }
+
+      else {
+        $("#belco_yourchoice").text("グー")
+        $("#belco_choice").text("パー")
+        $("#belco_result").text("あなたの負け")
+      }
+    })
+
+    // プレイヤーがチョキを押した場合
+    $(".cho").on("click", function () {
+
+      // ★べるこ側のランダムな手を作るために乱数を作ります
+      // 
+      // 0から1の間でランダムな値（乱数）を表示．
+      const randomNumber1 = Math.random();
+      // 0から2までのどれかが表示される！
+      const randomNumber2 = Math.floor(Math.random() * 3);
+      // randomNumber2が、0→グー 1→チョキ 2→パーとします
+
+      // ★プレイヤーのアクションに起因する分岐を作ります
+      // 
+      if (randomNumber2 === 0) {
+
+        $("#belco_yourchoice").text("チョキ")
+        $("#belco_choice").text("グー")
+        $("#belco_result").text("あなたの負け")
+      }
+
+      else if (randomNumber2 === 1) {
+        $("#belco_yourchoice").text("チョキ")
+        $("#belco_choice").text("チョキ")
+        $("#belco_result").text("あいこ")
+      }
+
+      else {
+        $("#belco_yourchoice").text("チョキ")
+        $("#belco_choice").text("パー")
+        $("#belco_result").text("あなたの勝ち")
+      }
+    })
+
+    // プレイヤーがパーを押した場合
+    $(".pa").on("click", function () {
+
+      // ★べるこ側のランダムな手を作るために乱数を作ります
+      // 
+      // 0から1の間でランダムな値（乱数）を表示．
+      const randomNumber1 = Math.random();
+      // 0から2までのどれかが表示される！
+      const randomNumber2 = Math.floor(Math.random() * 3);
+      // randomNumber2が、0→グー 1→チョキ 2→パーとします
+
+      // ★プレイヤーのアクションに起因する分岐を作ります
+      // 
+      if (randomNumber2 === 0) {
+
+        $("#belco_yourchoice").text("パー")
+        $("#belco_choice").text("グー")
+        $("#belco_result").text("あなたの勝ち")
+      }
+
+      else if (randomNumber2 === 1) {
+        $("#belco_yourchoice").text("パー")
+        $("#belco_choice").text("チョキ")
+        $("#belco_result").text("あなたの負け")
+      }
+
+      else {
+        $("#belco_yourchoice").text("パー")
+        $("#belco_choice").text("パー")
+        $("#belco_result").text("あいこ")
+      }
+    })
+
+
+    // VS ねこちゃん
+
+    // 名前を入れてもらう
+    $("#button2").click(function () {
+      const str2 = $("#text2").val(); // テキストボックスのvalue値を取得
+      $("#span2").text(str2); // spanタグに値を設定
+    });
+
+
+    // プレイヤーがグーを押した場合
+    $(".gu_cat").on("click", function () {
+
+      // ★べるこ側のランダムな手を作るために乱数を作ります
+      // 
+      // 0から1の間でランダムな値（乱数）を表示．
+      const randomNumber1 = Math.random();
+      // 0から2までのどれかが表示される！
+      const randomNumber2 = Math.floor(Math.random() * 7);
+      // randomNumber2が、0→グー 1→チョキ 2→パー 3~6→かわいいとします
+
+      // ★プレイヤーのアクションに起因する分岐を作ります
+      // 
+      if (randomNumber2 === 0) {
+
+        $("#cat_yourchoice").text("グー")
+        $("#cat_choice").text("グー")
+        $("#cat_result").text("あいこ")
+      }
+
+      else if (randomNumber2 === 1) {
+        $("#cat_yourchoice").text("グー")
+        $("#cat_choice").text("チョキ")
+        $("#cat_result").text("あなたの勝ち")
+        $(".select").slideUp();
+        $(".lose").slideDown();
+      }
+
+      else if (randomNumber2 === 2) {
+        $("#cat_yourchoice").text("グー")
+        $("#cat_choice").text("パー")
+        $("#cat_result").text("あなたの負け")
+      }
+
+      else {
+        $("#cat_yourchoice").text("グー")
+        $("#cat_choice").text("かわいい")
+        $("#cat_result").text("あなたの負け")
+      }
+    })
+
+    // プレイヤーがチョキを押した場合
+    $(".cho_cat").on("click", function () {
+
+      // ★べるこ側のランダムな手を作るために乱数を作ります
+      // 
+      // 0から1の間でランダムな値（乱数）を表示．
+      const randomNumber1 = Math.random();
+      // 0から2までのどれかが表示される！
+      const randomNumber2 = Math.floor(Math.random() * 7);
+      // randomNumber2が、0→グー 1→チョキ 2→パー 3~6→かわいいとします
+
+      // ★プレイヤーのアクションに起因する分岐を作ります
+      // 
+      if (randomNumber2 === 0) {
+
+        $("#cat_yourchoice").text("チョキ")
+        $("#cat_choice").text("グー")
+        $("#cat_result").text("あなたの負け")
+      }
+
+      else if (randomNumber2 === 1) {
+        $("#cat_yourchoice").text("チョキ")
+        $("#cat_choice").text("チョキ")
+        $("#cat_result").text("あいこ")
+      }
+
+      else if (randomNumber2 === 2) {
+        $("#cat_yourchoice").text("チョキ")
+        $("#cat_choice").text("パー")
+        $("#cat_result").text("あなたの勝ち")
+        $(".select").slideUp();
+        $(".lose").slideDown();
+      }
+
+      else {
+        $("#cat_yourchoice").text("グー")
+        $("#cat_choice").text("かわいい")
+        $("#cat_result").text("あなたの負け")
+      }
+    })
+
+    // プレイヤーがパーを押した場合
+    $(".pa_cat").on("click", function () {
+
+      // ★べるこ側のランダムな手を作るために乱数を作ります
+      // 
+      // 0から1の間でランダムな値（乱数）を表示．
+      const randomNumber1 = Math.random();
+      // 0から2までのどれかが表示される！
+      const randomNumber2 = Math.floor(Math.random() * 7);
+      // randomNumber2が、0→グー 1→チョキ 2→パー 3~6→かわいいとします
+
+      // ★プレイヤーのアクションに起因する分岐を作ります
+      // 
+      if (randomNumber2 === 0) {
+
+        $("#cat_yourchoice").text("パー")
+        $("#cat_choice").text("グー")
+        $("#cat_result").text("あなたの勝ち")
+        $(".select").slideUp();
+        $(".lose").slideDown();
+
+      }
+
+      else if (randomNumber2 === 1) {
+        $("#cat_yourchoice").text("パー")
+        $("#cat_choice").text("チョキ")
+        $("#cat_result").text("あなたの負け")
+      }
+
+      else if (randomNumber2 === 2) {
+        $("#cat_yourchoice").text("パー")
+        $("#cat_choice").text("パー")
+        $("#cat_result").text("あいこ")
+      }
+
+      else {
+        $("#cat_yourchoice").text("グー")
+        $("#cat_choice").text("かわいい")
+        $("#cat_result").text("あなたの負け")
+      }
+    })
+
+
+
+    // 敗北宣言をした後
+    $(".lose").on("click", function () {
+      $("#cat_result").css("text-decoration", "line-through");
+      $("#cat_result_2").fadeIn();
+      $(".lose").fadeOut();
+      $('#audio').get(0).play();
+
+
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>

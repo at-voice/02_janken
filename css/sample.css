@@ -1,0 +1,211 @@
+/* ここから */
+
+body {
+    justify-content: center;
+    align-items: center;
+    font-family: "M PLUS Rounded 1c";
+    width: 50vw;
+    margin: auto;
+}
+
+.main {
+    align-items: center;
+    text-align: center;
+    height: auto;
+}
+
+/* モニター画面 対戦相手選択画面 */
+.monitor_1 {
+    background-color: rgb(245, 187, 180);
+    height: 50vh;
+    padding: 5vw;
+    border-radius: 10%;
+    margin-top: 3vh;
+}
+
+
+
+.input_text {
+    width: 10vw;
+    padding: 1vw 1vw;
+    border-radius: 1px;
+    border: none;
+    background-color: rgb(245, 187, 180);
+}
+
+.input_btn {
+    width: 10vw;
+    padding: 1vw 1vw;
+    border: none;
+    background-color: rgb(245, 187, 180);
+}
+
+
+.monitor_1 img {
+    border-radius: 50%;
+    height: auto;
+    width: 20vw;
+    transition: 1.5s;
+}
+
+.monitor_1 img:hover {
+    border-radius: 50%;
+    height: auto;
+    width: 20vw;
+    filter: opacity(60%);
+}
+
+.monitor_img {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    height: 10%;
+    width: auto;
+
+
+}
+
+/* モニター画面 じゃんけん勝負画面 */
+
+.monitor_belco_window {
+    display: none;
+    width: 50vw;
+    height: auto;
+    margin-top: 3vh;
+    /* メイン＋選択肢全体 */
+}
+
+.monitor_cat_window {
+    display: none;
+    width: 50vw;
+    height: auto;
+    margin-top: 3vh;
+    /* メイン＋選択肢全体 */
+}
+
+.monitor_2 {
+    background-color: rgb(245, 187, 180);
+    border-radius: 10%;
+    height: 50vh;
+    padding: 5vw;
+    margin-top: 3vh;
+
+    /* メイン画面全体（選択肢抜き） */
+}
+
+.monitor_2 p {
+    line-height: 1%;
+}
+
+.monitor_2_in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    padding: 5% 0;
+    /* メイン画面の画像とテキストを並べる箱 */
+}
+
+.monitor_2 img {
+    border-radius: 50%;
+    height: auto;
+    width: 20vw;
+    /* 画像を丸くします */
+}
+
+/* .monitor_img {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    height: 10%;
+    width: auto;
+} */
+/* これ */
+
+.monitor_belco_text {
+    width: 20vw;
+}
+
+/* プレイヤーの名前 */
+.monitor_2_sub {
+    text-align: left;
+}
+
+/* プレイヤーの選択や結果 */
+.monitor_2_detail {
+    text-align: center;
+    font-size: 30px;
+    /* 選択 */
+}
+
+.choice {
+    font-size: 30px;
+    text-align: right;
+    /* 結果 */
+}
+
+.result_line {
+    background-color: #6fa1ff;
+}
+
+/* じゃんけん選択肢ボックス */
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 25vh;
+    padding-top: 1vh;
+}
+
+/* 選択肢画像 */
+.select img {
+    height: 10vh;
+    width: auto;
+}
+
+/* グーチョキパーボタン（初期設定） */
+.gu,
+.cho,
+.pa,
+.gu_cat,
+.cho_cat,
+.pa_cat {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 10vw;
+    background: #6fa1ff;
+    color: #666;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* グーチョキパーボタン変化後（あとでグーをコピペする） */
+.gu:hover {
+    background-color: palevioletred;
+    color: aliceblue;
+}
+
+.cho:hover {
+    background-color: palevioletred;
+}
+
+.pa:hover {
+    background-color: palevioletred;
+}
+
+
+/* 敗北宣言 */
+.lose {
+    display: none;
+    text-align: center;
+    background-color: #6fa1ff;
+}
+
+#cat_result_2 {
+    display: none;
+
+}

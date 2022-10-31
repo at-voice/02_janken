@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乱数発生の練習</title>
+</head>
+
+<body>
+  <h1>乱数発生の練習</h1>
+
+  <script>
+    // ここに処理を追加
+
+    //  【演習】0から4までのどれかが表示される！
+
+    const randomNumber1 = Math.random();
+    // 0 < Math.rondom < 1
+
+    const randomNumber2 = Math.floor(randomNumber1 * 5);
+    // Math. floor は対象の値の小数点以下を切り捨てする関数 
+    // 0 < rondomNumber1 < 1なので、その5倍をすると 1< rondomNumber2 <4となる
+
+
+    // 問題 1	:0	- 9
+    const randomNumber3 = Math.random();
+    const randomNumber4 = Math.floor(randomNumber3 * 10);
+    alert("問題1:" + randomNumber4);
+
+    // 問題 2:	1-	9
+    const randomNumber5 = Math.random(); // 乱数生成！ 0<x<1
+    const randomNumber6 = Math.floor(randomNumber5 * 9 + 1); // 四捨五入して1-9になる... （a*b）+1の形にする。その場合 0 < (a * b) < 9ならば成立する。
+    alert("問題2:" + randomNumber6);
+
+
+    // 問題 3:	5	-10
+    const randomNumber7 = Math.rondom();
+    const randomNumber8 = Math.floor(randomNumber7 * 6 + 5);
+    alert("問題3:" + randomNumber7);
+
+    // 問題 4	:50-99
+    const randomNumber9 = Math.rondom();
+    const randomNumber10 = Math.floor(randomNumber9 * (99 - 50 + 1));
+    alert("問題3:" + randomNumber10);
+    // Math.floor(Math.rondom() * (max - min +1) + min;
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

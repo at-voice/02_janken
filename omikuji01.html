@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おみくじ練習</title>
+</head>
+
+<body>
+  <script>
+    // ここに処理を追加
+
+    // 0-4をランダムに出す
+    const randomNumber1 = Math.random();
+    const randomNumber2 = Math.floor(randomNumber1 * 5);
+
+
+    // 条件分岐
+
+    if (randomNumber2 === 0) {
+      alert("大吉")
+
+    } else if (randomNumber2 === 1) {
+      alert("中吉")
+
+    } else if (randomNumber2 === 2) {
+      alert("小吉")
+
+    } else if (randomNumber2 === 3) {
+      alert("凶")
+
+    } else if (randomNumber2 === 4) {
+      alert("大凶")
+    }
+
+  </script>
+</body>
+
+</html>

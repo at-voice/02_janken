@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>じゃんけん</title>
+</head>
+
+<body>
+  <header>
+    <h1>じゃんけん</h1>
+  </header>
+
+  <main>
+    <ul>
+      <li id="gu_btn">グー</li>
+      <li id="cho_btn">チョキ</li>
+      <li id="par_btn">パー</li>
+    </ul>
+    <div id="com_hand">コンピュータの出した手は？</div>
+    <div id="result">結果は？</div>
+  </main>
+
+  <footer>フッター</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    //ここに処理を追加
+
+
+    // ★PC側のランダムな手を作るために乱数を作ります
+
+    // 0から1の間でランダムな値（乱数）を表示．
+    const randomNumber1 = Math.random();
+
+    // 0から2までのどれかが表示される！
+    const randomNumber2 = Math.floor(Math.random() * 3);
+
+    // randomNumber2が、0→グー 1→チョキ 2→パーとします
+
+
+
+    // ★プレイヤーのアクションに起因する分岐を作ります
+
+    // プレイヤーがグーを押した場合
+    $("#gu_btn").on("click", function () {
+
+      if (randomNumber2 === 0) {
+
+        $("#com_hand").text("グー")
+        $("#result").text("あいこ")
+      }
+
+      else if (randomNumber2 === 1) {
+        $("#com_hand").text("チョキ")
+        $("#result").text("あなたの勝ち")
+      }
+
+      else {
+        $("#com_hand").text("パー")
+        $("#result").text("あなたの負け")
+      }
+    }
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
